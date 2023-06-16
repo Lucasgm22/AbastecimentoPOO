@@ -1,27 +1,11 @@
-# Template para projetos de POO no GitHub Codespace
+# Exercício: Abastecimento automotivo
 
-* Crie um novo repositório usando o template;
-* Inicie um codespace a partir do novo repositório;
+Um aplicativo de pagamentos de combustível precisa registrar os abastecimentos efetuados pelos usuários. Um abastecimento é composto pelo código do posto de gasolina (letras e números), o código da bomba (apenas números), o tipo de combustível (álcool, gasolina comum, gasolina aditivada ou diesel), a quantidade que foi abastecida (em litros), o preço por litro no momento do abastecimento, e o desconto caso houver (em porcentagem). 
 
-O repositório já possui um projeto Java (sem build system) criado. A documentação a seguir foi gerada automaticamente pelo wizard do VSCode.
+Projete uma classe que represente um abastecimento, aplicando os princípios de ocultamento da informação, de modo que todas as propriedades possam ser consultadas, mas não podem ser alteradas após a construção do objeto. 
 
-----
+Todas as propriedades do abastecimento são obrigatórias, exceto o desconto (o qual, na ausência de valores explícitos, deve ser nulo). Não é permitido incluir abastecimentos de um tipo de combustível não-previsto na listagem acima. Nenhum valor numérico deve ser nulo, e nenhum código deve ser vazio (i.e. é preciso have pelo menos um caractere), além do que os códigos precisam respeitar as regras de formação definidas no parágrafo anterior. 
 
-## Getting Started
+A API da classe deve prover métodos para: i) consultar o custo bruto do abastecimento (sem desconto); ii) consultar o custo líquido do abastecimento (com desconto). 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Defina um programa-cliente que crie instâncias do objeto e teste se as especificações do objeto foram corretamente implementadas.
